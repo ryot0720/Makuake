@@ -68,4 +68,4 @@
 | delivery_day  | text        | null :false         |
 | project_id    | integer     | reference           |
 
-##### belongs_to product
+##### belongs_to project
