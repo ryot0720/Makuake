@@ -1,24 +1,59 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| User        |             |                     |
+| Column      | Type        | Options             |
+| name        | string      | null :false         |
+| email       | string      | null :false         |
+| password    | string      | null :false         |
 
-Things you may want to cover:
+has_many projects, through users_projects
+has_many products, through users_products
 
-* Ruby version
+| User_Project |             |                   |
+| Column       | Type        | Options           |
+| user_id      | integer     | reference         |
+| project_id   | integer     | reference         |
 
-* System dependencies
+belongs_to user
+belongs_to projects
 
-* Configuration
+| Project       |             |                     |
+| Column        | Type        | Options             |
+| name          | string      | null :false         |
+| explanation   | text        | null :false         |
+| category      | string      | null :false         |
+| image         | string      |                     |
+| movie         | string      |                     |
 
-* Database creation
+has_many users, through users_projects
+has_many courses
 
-* Database initialization
+| User_Product  |             |                     |
+| Column        | Type        | Options             |
+| user_id       | integer     | reference           |
+| product_id    | integer     | reference           |
 
-* How to run the test suite
+belongs_to user
+belongs_to products
 
-* Services (job queues, cache servers, search engines, etc.)
+| Product       |             |                     |
+| Column        | Type        | Options             |
+| name          | string      | null :false         |
+| explanation   | text        | null :false         |
+| price         | integer     | null :false         |
+| pcs           | integer     |                     |
+| delivery_day  | string      | null :false         |
 
-* Deployment instructions
+has_many users, through users_products
 
-* ...
+| Course        |             |                     |
+| Column        | Type        | Options             |
+| name          | string      | null :false         |
+| pcs           | integer     | null :false         |
+| explanation   | text        | null :false         |
+| image         | string      |                     |
+| supporter_num | integer     | null :false         |
+| delivery_day  | text        | null :false         |
+| project_id    | integer     | reference           |
+
+belongs_to product
