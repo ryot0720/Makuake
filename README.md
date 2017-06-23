@@ -1,6 +1,7 @@
 # README
 
-| User        |             |                     |
+User
+
 | Column      | Type        | Options             |
 | name        | string      | null :false         |
 | email       | string      | null :false         |
@@ -9,7 +10,8 @@
 has_many projects, through users_projects
 has_many products, through users_products
 
-| User_Project |             |                   |
+User_Project
+
 | Column       | Type        | Options           |
 | user_id      | integer     | reference         |
 | project_id   | integer     | reference         |
@@ -17,7 +19,8 @@ has_many products, through users_products
 belongs_to user
 belongs_to projects
 
-| Project       |             |                     |
+Project
+
 | Column        | Type        | Options             |
 | name          | string      | null :false         |
 | explanation   | text        | null :false         |
@@ -28,7 +31,8 @@ belongs_to projects
 has_many users, through users_projects
 has_many courses
 
-| User_Product  |             |                     |
+User_Product
+
 | Column        | Type        | Options             |
 | user_id       | integer     | reference           |
 | product_id    | integer     | reference           |
@@ -36,7 +40,8 @@ has_many courses
 belongs_to user
 belongs_to products
 
-| Product       |             |                     |
+Product
+
 | Column        | Type        | Options             |
 | name          | string      | null :false         |
 | explanation   | text        | null :false         |
@@ -46,7 +51,8 @@ belongs_to products
 
 has_many users, through users_products
 
-| Course        |             |                     |
+Course
+
 | Column        | Type        | Options             |
 | name          | string      | null :false         |
 | pcs           | integer     | null :false         |
