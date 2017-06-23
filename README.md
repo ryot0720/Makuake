@@ -3,6 +3,7 @@
 User
 
 | Column      | Type        | Options             |
+|:-----------|------------:|:------------:|
 | name        | string      | null :false         |
 | email       | string      | null :false         |
 | password    | string      | null :false         |
@@ -13,6 +14,7 @@ has_many products, through users_products
 User_Project
 
 | Column       | Type        | Options           |
+|:-----------|------------:|:------------:|
 | user_id      | integer     | reference         |
 | project_id   | integer     | reference         |
 
@@ -22,6 +24,7 @@ belongs_to projects
 Project
 
 | Column        | Type        | Options             |
+|:-----------|------------:|:------------:|
 | name          | string      | null :false         |
 | explanation   | text        | null :false         |
 | category      | string      | null :false         |
@@ -34,6 +37,7 @@ has_many courses
 User_Product
 
 | Column        | Type        | Options             |
+|:-----------|------------:|:------------:|
 | user_id       | integer     | reference           |
 | product_id    | integer     | reference           |
 
@@ -43,6 +47,7 @@ belongs_to products
 Product
 
 | Column        | Type        | Options             |
+|:-----------|------------:|:------------:|
 | name          | string      | null :false         |
 | explanation   | text        | null :false         |
 | price         | integer     | null :false         |
@@ -54,6 +59,7 @@ has_many users, through users_products
 Course
 
 | Column        | Type        | Options             |
+|:-----------|------------:|:------------:|
 | name          | string      | null :false         |
 | pcs           | integer     | null :false         |
 | explanation   | text        | null :false         |
